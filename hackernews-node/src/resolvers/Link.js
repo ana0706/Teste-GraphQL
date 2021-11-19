@@ -4,9 +4,11 @@ function postedBy(parent, args, context) {
   
   module.exports = {
     postedBy,
-    votes,c
+    votes,
 }
 
 function votes(parent, args, context) {
     return context.prisma.link.findUnique({ where: { id: parent.id } }).votes()
   }
+
+  
